@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name LA4440-Stereo-Amplifier-rescue)(type Legacy)(uri "${KIPRJMOD}/LA4440 Stereo Amplifier-rescue.lib")(options "")(descr ""))
+)

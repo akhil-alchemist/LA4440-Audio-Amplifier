@@ -1,0 +1,256 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Screw_Terminal_01x04 J2
+U 1 1 6052D394
+P 9950 2400
+F 0 "J2" H 10030 2392 50  0000 L CNN
+F 1 "AUDIO OUTPUT" H 10030 2301 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-4_P5.08mm" H 9950 2400 50  0001 C CNN
+F 3 "~" H 9950 2400 50  0001 C CNN
+	1    9950 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J3
+U 1 1 6052E2C3
+P 2550 5900
+F 0 "J3" H 2630 5892 50  0000 L CNN
+F 1 "POWER SUPPLY" H 2630 5801 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 2550 5900 50  0001 C CNN
+F 3 "~" H 2550 5900 50  0001 C CNN
+	1    2550 5900
+	1    0    0    -1  
+$EndComp
+Text Notes 1050 1650 0    118  ~ 24
+STEREO AMPLIFIER 6W *2 CHANNEL\n
+$Comp
+L power:GND #PWR01
+U 1 1 6059D4A7
+P 1650 7100
+F 0 "#PWR01" H 1650 6850 50  0001 C CNN
+F 1 "GND" H 1655 6927 50  0000 C CNN
+F 2 "" H 1650 7100 50  0001 C CNN
+F 3 "" H 1650 7100 50  0001 C CNN
+	1    1650 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR03
+U 1 1 6059D4AD
+P 2200 7150
+F 0 "#PWR03" H 2200 7000 50  0001 C CNN
+F 1 "+12V" H 2215 7323 50  0000 C CNN
+F 2 "" H 2200 7150 50  0001 C CNN
+F 3 "" H 2200 7150 50  0001 C CNN
+	1    2200 7150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2200 7150 2200 6200
+Wire Wire Line
+	2200 6000 2350 6000
+Wire Wire Line
+	9750 2300 9500 2300
+Wire Wire Line
+	9750 2400 9550 2400
+Wire Wire Line
+	9750 2500 9550 2500
+Wire Wire Line
+	9750 2600 9500 2600
+Text Label 9500 2600 2    50   ~ 0
+LEFT_SPK1
+Text Label 9500 2300 2    50   ~ 0
+RIGHT_SPK1
+Wire Wire Line
+	9550 2400 9550 2500
+Wire Wire Line
+	9550 2400 9500 2400
+Connection ~ 9550 2400
+$Comp
+L power:GND #PWR02
+U 1 1 605B7BAB
+P 9500 2400
+F 0 "#PWR02" H 9500 2150 50  0001 C CNN
+F 1 "GND" V 9505 2272 50  0000 R CNN
+F 2 "" H 9500 2400 50  0001 C CNN
+F 3 "" H 9500 2400 50  0001 C CNN
+	1    9500 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP C12
+U 1 1 60532DA8
+P 2000 6200
+F 0 "C12" V 2255 6200 50  0000 C CNN
+F 1 "100uF 16V" V 2150 6150 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P3.50mm" H 2038 6050 50  0001 C CNN
+F 3 "~" H 2000 6200 50  0001 C CNN
+	1    2000 6200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2150 6200 2200 6200
+Connection ~ 2200 6200
+Wire Wire Line
+	2200 6200 2200 6000
+Wire Wire Line
+	1650 5900 1650 6200
+Wire Wire Line
+	1650 5900 2350 5900
+Wire Wire Line
+	1850 6200 1650 6200
+Connection ~ 1650 6200
+Wire Wire Line
+	1650 6200 1650 7100
+$Sheet
+S 3900 2250 2500 1550
+U 60549088
+F0 "STEREO" 118
+F1 "Stereo_amp.sch" 118
+F2 "LEFT_IN" I L 3900 2400 118
+F3 "RIGHT_IN" I L 3900 2650 118
+F4 "PRE_GND" I L 3900 2900 118
+F5 "RIGHT_SPK1" I R 6400 2450 118
+F6 "LEFT_SPK1" I R 6400 2800 118
+F7 "POWER_GND" I R 6400 3600 118
+F8 "POWER_VCC" I R 6400 3300 118
+$EndSheet
+$Sheet
+S 4350 4700 2900 1650
+U 60549997
+F0 "SUBwoofer" 118
+F1 "Subwoofer_amp.sch" 118
+F2 "LEFT_IN" I L 4350 5150 118
+F3 "PRE_GND" I L 4350 5750 118
+F4 "POWER_GND" I R 7250 5900 118
+F5 "POWER_VCC" I R 7250 5600 118
+F6 "SUB_OUT1" I R 7250 4900 118
+F7 "SUB_OUT2" I R 7250 5250 118
+$EndSheet
+$Comp
+L Connector:Screw_Terminal_01x03 J1
+U 1 1 6055FB07
+P 1000 2350
+F 0 "J1" H 918 2025 50  0000 C CNN
+F 1 "AUDIO INPUT " H 1119 2116 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-3_P5.08mm" H 1000 2350 50  0001 C CNN
+F 3 "~" H 1000 2350 50  0001 C CNN
+	1    1000 2350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1500 2350 1200 2350
+Wire Wire Line
+	1200 2250 1200 2100
+Wire Wire Line
+	1200 2100 1500 2100
+Wire Wire Line
+	1200 2450 1200 2600
+Wire Wire Line
+	1200 2600 1500 2600
+Wire Wire Line
+	3900 2400 3450 2400
+Wire Wire Line
+	3900 2650 3450 2650
+Wire Wire Line
+	3900 2900 3450 2900
+Wire Wire Line
+	6400 2450 6950 2450
+Wire Wire Line
+	6400 2800 6950 2800
+Wire Wire Line
+	6400 3300 6950 3300
+Wire Wire Line
+	6400 3600 6950 3600
+Text Label 6950 2450 0    50   ~ 0
+RIGHT_SPK1
+Text Label 6950 2800 0    50   ~ 0
+LEFT_SPK1
+Text Label 2200 6950 0    118  ~ 0
+POWER_VCC
+Text Label 1650 6900 2    118  ~ 0
+POWER_GND
+Text Label 6950 3600 0    118  ~ 0
+POWER_GND
+Text Label 6950 3300 0    118  ~ 0
+POWER_VCC
+Text Label 3450 2400 2    118  ~ 0
+LEFT_IN
+Text Label 3450 2650 2    118  ~ 0
+RIGHT_IN
+Text Label 3450 2900 2    118  ~ 0
+PRE_GND
+Text Label 1500 2100 0    118  ~ 0
+LEFT_IN
+Text Label 1500 2600 0    118  ~ 0
+RIGHT_IN
+Text Label 1500 2350 0    118  ~ 0
+PRE_GND
+Wire Wire Line
+	7250 5600 7850 5600
+Wire Wire Line
+	7250 5900 7850 5900
+Text Label 7850 5900 0    118  ~ 0
+POWER_GND
+Text Label 7850 5600 0    118  ~ 0
+POWER_VCC
+$Comp
+L Connector:Screw_Terminal_01x02 J4
+U 1 1 60668DFB
+P 9950 2900
+F 0 "J4" H 10030 2892 50  0000 L CNN
+F 1 "SUB_OUT" H 10030 2801 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 9950 2900 50  0001 C CNN
+F 3 "~" H 9950 2900 50  0001 C CNN
+	1    9950 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 4900 7900 4900
+Wire Wire Line
+	7250 5250 7900 5250
+Text Label 7900 4900 0    118  ~ 0
+SUB_SPK+
+Text Label 7900 5250 0    118  ~ 0
+SUB_SPK-
+Text Label 9500 3150 2    118  ~ 0
+SUB_SPK+
+Text Label 9450 2900 2    118  ~ 0
+SUB_SPK-
+Wire Wire Line
+	9750 2900 9450 2900
+Wire Wire Line
+	9500 3150 9650 3150
+Wire Wire Line
+	9650 3150 9650 3000
+Wire Wire Line
+	9650 3000 9750 3000
+Wire Wire Line
+	4350 5150 4050 5150
+Wire Wire Line
+	4350 5750 4050 5750
+Text Label 4050 5150 2    118  ~ 0
+LEFT_IN
+Text Label 4050 5750 2    118  ~ 0
+PRE_GND
+Text Notes 1750 4750 0    118  ~ 24
+SUBWOOFER AMPLIFIER\n
+Text Notes 4450 1100 0    118  ~ 24
+LA4440 2.1 AMPLIFIER
+Text Notes 9800 7300 0    59   ~ 12
+designed by Akhil-alchemist
+$EndSCHEMATC
