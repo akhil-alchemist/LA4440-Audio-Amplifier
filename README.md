@@ -8,4 +8,6 @@
 
 https://www.electroschematics.com/wp-content/uploads/2012/07/la4440-datasheet.pdf
 
+learn and grow
+
 
